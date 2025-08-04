@@ -26,7 +26,7 @@ function showAPIKeyModal() {
     modal.innerHTML = `
         <div class="modal-content">
             <h2>🔑 請輸入您的API密鑰</h2>
-            <p>為了使用故事生成功能，請輸入您的OpenRouter API密鑰。</p>
+            <p>為使用故事生成功能，請輸入您的OpenRouter API密鑰</p>
             <div class="api-key-input-container">
                 <input type="password" id="api-key-input" placeholder="請輸入您的API密鑰..." />
                 <button id="save-api-key-btn" class="save-api-key-btn">保存並開始使用</button>
@@ -39,7 +39,7 @@ function showAPIKeyModal() {
                     <li>在控制台中創建新的API密鑰</li>
                     <li>複製密鑰並粘貼到上面的輸入框中</li>
                 </ol>
-                <p><small>注意：您的API密鑰僅存儲在當前瀏覽器會話中，關閉頁面後會自動清除。</small></p>
+                <p><small>注意：您的API密鑰僅存儲在當前瀏覽器，關閉頁面後會自動清除。</small></p>
             </div>
         </div>
     `;
