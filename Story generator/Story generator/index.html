@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇妙故事工場 - 廣東話兒童故事及漫畫生成器</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cursor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bubblegum+Sans&family=Patrick+Hand&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/2784/2784389.png" alt="奇妙故事工場" class="logo">
+                <h1>奇妙故事工場</h1>
+            </div>
+        </header>
+
+        <main class="split-layout">
+            <div class="input-container">
+                <section class="input-section">
+                    <div class="character-selector">
+                        <h2>🎮 開始故事冒險！</h2>
+                        <form id="story-form">
+                            <div class="story-builder">
+                                <div class="form-card character-card">
+                                    <div class="card-icon">👧👦</div>
+                                    <label for="character">故事有咩人物？</label>
+                                    <input type="text" id="character" placeholder="例如: 小兔仔、勇敢嘅女孩..." required>
+                                </div>
+
+                                <div class="form-card location-card">
+                                    <div class="card-icon">🏝️</div>
+                                    <label for="location">喺邊度發生？</label>
+                                    <input type="text" id="location" placeholder="例如: 魔法森林、太空船..." required>
+                                </div>
+
+                                <div class="form-card time-card">
+                                    <div class="card-icon">🕒</div>
+                                    <label for="time">幾時發生？</label>
+                                    <input type="text" id="time" placeholder="例如: 一個月黑風高嘅晚上..." required>
+                                </div>
+
+                                <div class="form-card event-card">
+                                    <div class="card-icon">✨</div>
+                                    <label for="event">發生咩事？</label>
+                                    <input type="text" id="event" placeholder="例如: 發現咗一個神秘寶藏..." required>
+                                </div>
+                            </div>
+
+                            <div class="options-row">
+                                <div class="option-group age-group">
+                                    <label for="age" class="option-label">📚 選擇年齡組別</label>
+                                    <div class="age-options">
+                                        <input type="radio" id="age-young" name="age" value="7" checked>
+                                        <label for="age-young" class="age-label">
+                                            <span class="age-icon">👶</span>
+                                            <span class="age-text">7歲以下</span>
+                                        </label>
+
+                                        <input type="radio" id="age-mid" name="age" value="10">
+                                        <label for="age-mid" class="age-label">
+                                            <span class="age-icon">👧</span>
+                                            <span class="age-text">8-12歲</span>
+                                        </label>
+
+                                        <input type="radio" id="age-teen" name="age" value="13">
+                                        <label for="age-teen" class="age-label">
+                                            <span class="age-icon">🧑</span>
+                                            <span class="age-text">12歲+</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="generate-btn" class="magic-button">
+                                <span class="button-text">✨ 創造奇妙故事 ✨</span>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <div class="output-container">
+                <section class="output-section" id="output-section">
+                    <div class="story-container">
+                        <h2>✨ 你嘅奇妙故事 ✨</h2>
+                        <div id="loading-indicator" class="hidden story-loading">
+                            <div class="spinner"></div>
+                            <span id="loading-text">正在創作中...</span>
+                        </div>
+                        <div class="story-scroll">
+                            <div id="story-text"></div>
+                        </div>
+                    </div>
+
+                    <div class="comprehension-questions">
+                        <h2>📚 理解問題</h2>
+                        <div id="questions-container">
+                            <!-- 問題將由 JavaScript 動態生成 -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

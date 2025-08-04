@@ -1,0 +1,4 @@
+/* Cursor styles */
+#story-text p {
+    cursor: url('yellow-cursor.svg') 16 0, url('triangle-cursor.png') 16 0, pointer;
+}
